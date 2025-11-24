@@ -1,0 +1,153 @@
+/* ======== GRID CYBER DE FONDO ======== */
+body {
+    margin: 0;
+    font-family: "Poppins", "Segoe UI", sans-serif;
+    background:
+        linear-gradient(180deg, rgba(0,0,0,0.7), rgba(0,0,0,0.9)),
+        repeating-linear-gradient(
+            0deg,
+            #1a1a20 0px,
+            #1a1a20 1px,
+            transparent 1px,
+            transparent 40px
+        ),
+        repeating-linear-gradient(
+            90deg,
+            #1a1a20 0px,
+            #1a1a20 1px,
+            transparent 1px,
+            transparent 40px
+        );
+    animation: moveGrid 10s linear infinite;
+    color: #fff;
+    line-height: 1.7;
+}
+
+@keyframes moveGrid {
+    0% { background-position: 0 0, 0 0, 0 0; }
+    100% { background-position: 0 200px, 0 200px, 0 200px; }
+}
+
+/* ======== HEADER FUTURISTA ROJO (ARREGLADO) ======== */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(60, 0, 10, 0.9); /* FONDO SÓLIDO PARA QUE NO SE CORTE */
+    backdrop-filter: blur(12px);
+    border-bottom: 2px solid #ff003c;
+    padding: 22px 40px; /* MÁS ALTO Y UNIFORME */
+    color: #ffb3c4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-shadow: 0 0 8px #ff003c;
+    box-shadow: 0 0 18px rgba(255, 0, 60, 0.4);
+    z-index: 1000;
+}
+
+header h1 {
+    font-size: 1.5rem;
+    font-weight: 70;
+    color: #ff003c;
+}
+
+/* ======== NAV ======== */
+nav a {
+    color: white;
+    margin-left: 25px;
+    text-decoration: none;
+    font-weight: 60;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ff003c;
+    text-shadow: 0 0 12px #ff003c;
+}
+
+/* ======== CONTAINER ======== */
+.container {
+    max-width: 1000px;
+    margin: 140px auto 50px; /* BAJADO PARA QUE NO CHOQUE EL HEADER */
+    padding: 0 20px;
+}
+
+/* ======== SECCIONES ======== */
+.section {
+    background: rgba(20, 20, 30, 0.8);
+    padding: 40px;
+    margin: 15px 0;
+    border-radius: 20px;
+    border: 2px solid #ff003c;
+    box-shadow: 0 0 25px rgba(255, 0, 60, 0.3);
+    backdrop-filter: blur(10px);
+    transition: 0.3s ease;
+}
+
+.section:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 40px rgba(255, 0, 60, 0.6);
+}
+
+/* ======== TÍTULOS ======== */
+.section h2 {
+    font-size: 1.7rem;
+    margin-bottom: 20px;
+    color: #ff003c;
+    border-left: 6px solid #ff003c;
+    padding-left: 12px;
+    text-shadow: 0 0 12px #ff003c;
+}
+
+/* ======== TEXTO ======== */
+p {
+    font-size: 1.15rem;
+    color: #e3e3e3;
+}
+
+/* ======== IMÁGENES ======== */
+img {
+    width: 280px;
+    border-radius: 14px;
+    border: 3px solid #ff003c;
+    display: block;
+    margin: 25px auto;
+    box-shadow: 0 0 20px rgba(255, 0, 60, 0.5);
+    transition: 0.4s ease;
+}
+
+img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 35px rgba(255, 0, 60, 0.8);
+}
+
+/* ======== FOOTER ======== */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(255, 0, 50, 0.15);
+    border-top: 2px solid #ff003c;
+    color: white;
+    margin-top: 50px;
+    text-shadow: 0 0 8px #ff003c;
+}
+
+/* ======== RESPONSIVE ======== */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 25px;
+    }
+    nav {
+        margin-top: 10px;
+    }
+    .section {
+        padding: 30px 20px;
+    }
+    img {
+        width: 100%;
+    }
+}
